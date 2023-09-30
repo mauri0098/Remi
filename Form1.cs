@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Remi
 {
@@ -24,9 +25,33 @@ namespace Remi
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            oRemis = new REMIS();
-            tRemis = oRemis.getData();
 
+           
+
+
+            
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            REMIS oChofer = new REMIS();
+            DataRow fila = oChofer.buscar(Convert.ToInt32(txtchofer.Text));
+            if (fila == null)
+            {
+                MessageBox.Show("EL NUMERO DE CHOFER NO EXISTE", "ERROR");
+            }
+            else
+            {
+                textBox2.Text = fila["nombre"].ToString();
+            }
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }
