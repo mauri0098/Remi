@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
+using System.IO;
 
 namespace Remi
 {
@@ -14,6 +15,25 @@ namespace Remi
         OleDbCommand comando;
         OleDbDataAdapter adaptador;
         DataTable tabla;
+
+        string cadena;
+        private int chofer;
+
+        public int Chofer
+        {
+            get { return chofer; }
+            set { chofer = value; }
+        }
+        private string nombre;
+
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+
+
+
 
         public REMIS()
         {
@@ -41,9 +61,22 @@ namespace Remi
             DataRow fila = tabla.Rows.Find(chofer);
             return fila;
         }
+        public void modificar() //LO GRABA EM MEMORIA
+        {
+            DataRow fila = tabla.NewRow();
+            fila["chofer"] = chofer;
+            fila["nombre"] = nombre;
+            tabla.Rows.Add(fila);
+            
 
+            OleDbCommandBuilder cb = new OleDbCommandBuilder(adaptador);
+            adaptador.Update(tabla);
+        }
 
-
+        public DataTable getRemis()
+        {
+            return tabla;
+        }
 
 
 

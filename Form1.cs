@@ -52,7 +52,15 @@ namespace Remi
 
         private void button1_Click(object sender, EventArgs e)
         {
+            REMIS onombre = new REMIS();
 
+            onombre.Chofer = Convert.ToInt32(txtchofer.Text);
+            onombre.Nombre = textBox2.Text;
+
+            onombre.modificar();
+
+            txtchofer.Text = "";
+            textBox2.Text = "";
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
