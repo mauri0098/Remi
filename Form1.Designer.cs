@@ -40,7 +40,7 @@ namespace Remi
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 31);
+            this.label1.Location = new System.Drawing.Point(38, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace Remi
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(94, 82);
+            this.textBox2.Location = new System.Drawing.Point(94, 78);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(161, 20);
             this.textBox2.TabIndex = 2;
@@ -64,7 +64,7 @@ namespace Remi
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 85);
+            this.label2.Location = new System.Drawing.Point(36, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 3;
