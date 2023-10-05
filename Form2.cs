@@ -41,7 +41,7 @@ namespace Remi
         private void Form2_Load(object sender, EventArgs e)
         {
            REMIS oremis = new REMIS();
-            tabla = oremis.getRemis();
+            tabla = oremis.getData();
            
 
         }

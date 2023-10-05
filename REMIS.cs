@@ -73,7 +73,7 @@ namespace Remi
             adaptador.Update(tabla);
         }
 
-        public DataTable getRemis()
+        public DataTable getData()
         {
             return tabla;
         }

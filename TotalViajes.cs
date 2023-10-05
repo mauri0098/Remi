@@ -32,16 +32,12 @@ namespace Remi
             adaptador.Fill(tabla);
 
             DataColumn[] vec = new DataColumn[1];
-            vec[0] = tabla.Columns["chofer"];
+            vec[0] = tabla.Columns["viaje"];
             tabla.PrimaryKey = vec;
         }
-        public void ver(DataGridView dptcuadro2)//lo llama de otro formulario
+        public DataTable getData()
         {
-            dptcuadro2.DataSource = tabla;//lo mostramos en la tabla
-
-
-
-
+            return tabla;
         }
 
     }
