@@ -23,9 +23,9 @@ namespace Remi
         private void Form3_Load(object sender, EventArgs e)
         {
           REMIS       chofer = new REMIS();//creo la objeto
-          DataTable   Tchoferes = chofer.getData();//traigo la tabla con el metodo 
+          DataTable Tchoferes = chofer.getData();//traigo la tabla con el metodo 
           TotalViajes totalViajes = new TotalViajes();//creo la objeto
-            DataTable   Tviajes   =  totalViajes.getData();//traigo la tabla con el metodo 
+          DataTable   Tviajes   =  totalViajes.getData();//traigo la tabla con el metodo 
             foreach (DataRow filasChofer in Tchoferes.Rows)//hago que recorra todas la FILAS de chofer en la TABLA DE CHOFER (Tchoferes)
             {
                  decimal Total = 0;//variable decimal 0

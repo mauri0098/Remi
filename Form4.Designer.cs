@@ -29,116 +29,119 @@ namespace Remi
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dgvViajes = new System.Windows.Forms.DataGridView();
+            this.clmViaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmChofer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmdBuscar = new System.Windows.Forms.Button();
+            this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.C1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // dgvViajes
             // 
-            this.button1.Location = new System.Drawing.Point(539, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "VER";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dgvViajes.AllowUserToAddRows = false;
+            this.dgvViajes.AllowUserToDeleteRows = false;
+            this.dgvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViajes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmViaje,
+            this.clmFecha,
+            this.clmChofer,
+            this.clmImporte});
+            this.dgvViajes.Location = new System.Drawing.Point(12, 69);
+            this.dgvViajes.Name = "dgvViajes";
+            this.dgvViajes.ReadOnly = true;
+            this.dgvViajes.Size = new System.Drawing.Size(548, 346);
+            this.dgvViajes.TabIndex = 17;
             // 
-            // label1
+            // clmViaje
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "DESDE";
+            this.clmViaje.HeaderText = "Viaje";
+            this.clmViaje.Name = "clmViaje";
+            this.clmViaje.ReadOnly = true;
             // 
-            // dateTimePicker1
+            // clmFecha
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(115, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(108, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.clmFecha.HeaderText = "Fecha";
+            this.clmFecha.Name = "clmFecha";
+            this.clmFecha.ReadOnly = true;
+            // 
+            // clmChofer
+            // 
+            this.clmChofer.HeaderText = "Chofer";
+            this.clmChofer.Name = "clmChofer";
+            this.clmChofer.ReadOnly = true;
+            this.clmChofer.Width = 200;
+            // 
+            // clmImporte
+            // 
+            this.clmImporte.HeaderText = "Importe";
+            this.clmImporte.Name = "clmImporte";
+            this.clmImporte.ReadOnly = true;
+            // 
+            // cmdBuscar
+            // 
+            this.cmdBuscar.Location = new System.Drawing.Point(253, 27);
+            this.cmdBuscar.Name = "cmdBuscar";
+            this.cmdBuscar.Size = new System.Drawing.Size(75, 23);
+            this.cmdBuscar.TabIndex = 16;
+            this.cmdBuscar.Text = "Buscar";
+            this.cmdBuscar.UseVisualStyleBackColor = true;
+            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
+            // 
+            // dtpFechaHasta
+            // 
+            this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaHasta.Location = new System.Drawing.Point(132, 31);
+            this.dtpFechaHasta.Name = "dtpFechaHasta";
+            this.dtpFechaHasta.Size = new System.Drawing.Size(99, 20);
+            this.dtpFechaHasta.TabIndex = 15;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(360, 18);
+            this.label2.Location = new System.Drawing.Point(129, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "HASTA";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Hasta";
             // 
-            // dateTimePicker2
+            // dtpFechaDesde
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(419, 13);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker2.TabIndex = 4;
+            this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaDesde.Location = new System.Drawing.Point(12, 31);
+            this.dtpFechaDesde.Name = "dtpFechaDesde";
+            this.dtpFechaDesde.Size = new System.Drawing.Size(99, 20);
+            this.dtpFechaDesde.TabIndex = 13;
             // 
-            // dataGridView1
+            // label1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.C1,
-            this.C2,
-            this.C3,
-            this.C4});
-            this.dataGridView1.Location = new System.Drawing.Point(41, 61);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(453, 187);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // C1
-            // 
-            this.C1.HeaderText = "VIAJE";
-            this.C1.Name = "C1";
-            this.C1.ReadOnly = true;
-            // 
-            // C2
-            // 
-            this.C2.HeaderText = "FECHA";
-            this.C2.Name = "C2";
-            this.C2.ReadOnly = true;
-            // 
-            // C3
-            // 
-            this.C3.HeaderText = "NOMBRE DE CHOFER";
-            this.C3.Name = "C3";
-            this.C3.ReadOnly = true;
-            // 
-            // C4
-            // 
-            this.C4.HeaderText = "IMPORTE";
-            this.C4.Name = "C4";
-            this.C4.ReadOnly = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Desde";
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 274);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker2);
+            this.ClientSize = new System.Drawing.Size(643, 457);
+            this.Controls.Add(this.dgvViajes);
+            this.Controls.Add(this.cmdBuscar);
+            this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFechaDesde);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Name = "Form4";
             this.Text = "Form4";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form4_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,15 +149,15 @@ namespace Remi
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dgvViajes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmViaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmChofer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmImporte;
+        private System.Windows.Forms.Button cmdBuscar;
+        private System.Windows.Forms.DateTimePicker dtpFechaHasta;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C4;
+        private System.Windows.Forms.DateTimePicker dtpFechaDesde;
+        private System.Windows.Forms.Label label1;
     }
 }
