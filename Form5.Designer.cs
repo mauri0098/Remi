@@ -30,14 +30,14 @@ namespace Remi
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.C1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.C5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lst = new System.Windows.Forms.ListBox();
+            this.dgvViajes = new System.Windows.Forms.DataGridView();
+            this.clmFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDesde = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmHasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmKilometros = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,72 +49,74 @@ namespace Remi
             this.label1.TabIndex = 0;
             this.label1.Text = "SELECCIONE CHOFER";
             // 
-            // listBox1
+            // lst
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(25, 55);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(208, 277);
-            this.listBox1.TabIndex = 1;
+            this.lst.FormattingEnabled = true;
+            this.lst.Location = new System.Drawing.Point(25, 55);
+            this.lst.Name = "lst";
+            this.lst.Size = new System.Drawing.Size(208, 277);
+            this.lst.TabIndex = 1;
+            this.lst.SelectedIndexChanged += new System.EventHandler(this.lst_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // dgvViajes
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.C1,
-            this.C2,
-            this.C3,
-            this.C4,
-            this.C5});
-            this.dataGridView1.Location = new System.Drawing.Point(260, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(551, 268);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvViajes.AllowUserToAddRows = false;
+            this.dgvViajes.AllowUserToDeleteRows = false;
+            this.dgvViajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvViajes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmFecha,
+            this.clmDesde,
+            this.clmHasta,
+            this.clmKilometros,
+            this.clmImporte});
+            this.dgvViajes.Location = new System.Drawing.Point(265, 12);
+            this.dgvViajes.Name = "dgvViajes";
+            this.dgvViajes.ReadOnly = true;
+            this.dgvViajes.Size = new System.Drawing.Size(543, 394);
+            this.dgvViajes.TabIndex = 6;
             // 
-            // C1
+            // clmFecha
             // 
-            this.C1.HeaderText = "FECHA";
-            this.C1.Name = "C1";
-            this.C1.ReadOnly = true;
+            this.clmFecha.HeaderText = "Fecha";
+            this.clmFecha.Name = "clmFecha";
+            this.clmFecha.ReadOnly = true;
             // 
-            // C2
+            // clmDesde
             // 
-            this.C2.HeaderText = "DESDE (BARRIO)";
-            this.C2.Name = "C2";
-            this.C2.ReadOnly = true;
+            this.clmDesde.HeaderText = "Desde";
+            this.clmDesde.Name = "clmDesde";
+            this.clmDesde.ReadOnly = true;
             // 
-            // C3
+            // clmHasta
             // 
-            this.C3.HeaderText = "HASTA (BARRIO)";
-            this.C3.Name = "C3";
-            this.C3.ReadOnly = true;
+            this.clmHasta.HeaderText = "Hasta";
+            this.clmHasta.Name = "clmHasta";
+            this.clmHasta.ReadOnly = true;
             // 
-            // C4
+            // clmKilometros
             // 
-            this.C4.HeaderText = "KM";
-            this.C4.Name = "C4";
-            this.C4.ReadOnly = true;
+            this.clmKilometros.HeaderText = "Kilometros";
+            this.clmKilometros.Name = "clmKilometros";
+            this.clmKilometros.ReadOnly = true;
             // 
-            // C5
+            // clmImporte
             // 
-            this.C5.HeaderText = "IMPORTE";
-            this.C5.Name = "C5";
-            this.C5.ReadOnly = true;
+            this.clmImporte.HeaderText = "Importe";
+            this.clmImporte.Name = "clmImporte";
+            this.clmImporte.ReadOnly = true;
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 438);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.dgvViajes);
+            this.Controls.Add(this.lst);
             this.Controls.Add(this.label1);
             this.Name = "Form5";
             this.Text = "Form5";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form5_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,12 +125,12 @@ namespace Remi
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn C5;
+        private System.Windows.Forms.ListBox lst;
+        private System.Windows.Forms.DataGridView dgvViajes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDesde;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmHasta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmKilometros;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmImporte;
     }
 }

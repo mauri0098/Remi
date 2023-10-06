@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Remi
 {
@@ -77,7 +78,15 @@ namespace Remi
         {
             return tabla;
         }
+        public void ver(ListBox lst) //LO GRABA EM MEMORIA
+        {
+            lst.DisplayMember = "nombre";
+            lst.ValueMember = "chofer";
+            lst.DataSource = tabla;
 
+
+            
+        }
 
 
 
