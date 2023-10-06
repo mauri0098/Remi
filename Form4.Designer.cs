@@ -52,7 +52,7 @@ namespace Remi
             this.clmFecha,
             this.clmChofer,
             this.clmImporte});
-            this.dgvViajes.Location = new System.Drawing.Point(12, 66);
+            this.dgvViajes.Location = new System.Drawing.Point(12, 57);
             this.dgvViajes.Name = "dgvViajes";
             this.dgvViajes.ReadOnly = true;
             this.dgvViajes.Size = new System.Drawing.Size(548, 346);
