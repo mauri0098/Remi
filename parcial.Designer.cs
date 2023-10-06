@@ -107,7 +107,7 @@
             this.Destino,
             this.Kilometros,
             this.Importe});
-            this.dataGridView1.Location = new System.Drawing.Point(185, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(184, 21);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(581, 283);
             this.dataGridView1.TabIndex = 11;
